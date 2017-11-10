@@ -1,0 +1,142 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.popup {
+		width: 40%; }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.popup {
+		width: 50%; }
+	nav{
+		display: none;
+	}
+	nav ul{
+		position: absolute;
+		top: 40px;
+		right: 15px;
+		z-index: 10;
+		text-align:center;
+	}
+	nav ul li{
+		display: block;
+		padding: 15px 100px;
+		background: #666;
+		margin: 0;
+	}
+
+	/*portfolio*/
+	.port-img{
+	width: 33.3%;
+	}
+
+	.s_name{
+		width: 100%
+	}	
+	.s-r{
+	margin-right: 0;
+	}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.popup {
+		width: 65%; }
+	.header_vmist h1{
+		font-size: 50px;
+		line-height: 60px;
+	}	
+	.about_right>img{
+		margin: 30px auto 0;
+		width: 80%;
+		display: block;
+	}
+
+	/*portfolio*/
+	.port-img{
+	width: 50%;
+	}
+
+	.teams img{
+		width: 80%;
+		margin: 0 10%;
+	}
+	.teams .img-mask{
+		width: 80%;
+		margin: 0 10%;
+	}
+
+
+}	
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.popup {
+		width: 90%;
+		font-size: 16px;
+		line-height: 24px; }
+	.header_vmist h1{
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.butons{
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.butons>.buttons{
+		display: block;
+	}
+	.left-marg{
+		margin-left: 0;
+		margin-top: 30px;
+	}
+
+	/*about us*/
+	.s-title{
+		margin-bottom: 40px;
+	}
+	.but_black{
+		margin-bottom: 40px;
+	}
+
+
+	/*portfolio*/
+	.port-img{
+	width: 50%;
+	}	
+
+	/*play*/
+	.s-black .butons{
+		width: 60%;
+	}
+
+	.teams img{
+		width: 100%;
+		margin: 0 0;
+	}
+	.teams .img-mask{
+		width: 100%;
+		margin: 0 0;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	.port-img{
+	width: 100%;
+	}
+
+	.footer-text ul li{
+		margin: 12px;
+	}
+	.copyrait{
+	margin-top: 10px;
+	}
+
+}
