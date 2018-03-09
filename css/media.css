@@ -2,8 +2,8 @@
 }
 @media only screen and (max-width:992px){.popup{width:50%;}
 nav{display:none;}
-nav ul{position:absolute;top:40px;right:15px;z-index:10;text-align:center;}
-nav ul li{display:block;padding:15px 100px;background:#666;margin:0;}
+nav ul{position:absolute;top:52px;right:0;z-index:10;text-align:center;background: rgba(34, 34, 34, 0.8);}
+nav ul li{display:block;padding:15px 100px;margin:0;}
 .port-img{width:33.3%;}
 .s_name{width:100%}
 .s-r{margin-right:0;}
@@ -26,6 +26,7 @@ nav ul li{display:block;padding:15px 100px;background:#666;margin:0;}
 .s-black .butons{width:60%;}
 .teams img{width:100%;margin:0 0;}
 .teams .img-mask{width:100%;margin:0 0;}
+.first_screen{padding-top: 200px;padding-bottom: 200px;height: auto;}
 }
 @media only screen and (max-width:320px){.port-img{width:100%;}
 .footer-text ul li{margin:12px;}
