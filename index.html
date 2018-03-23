@@ -24,14 +24,109 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<noscript>
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
 	<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Open+Sans:300,400,400i,600" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	</noscript>
+	<link rel="preload" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="libs/font-awesome-4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="libs/owl-carousel/owl.carousel.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Open+Sans:300,400,400i,600" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/media.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<style>
+/*preload*/
+@keyframes loader {
+	0%, 10%, 100% {
+		width: 80px;
+		height: 80px;
+	}
+	65% {
+		width: 150px;
+		height: 150px;
+	}
+}
+@keyframes loaderBlock {
+	0%, 30% {
+		transform: rotate(0);
+	}
+	55% {
+		background-color: #F37272;
+	}
+	100% {
+		transform: rotate(90deg);
+	}
+}
+@keyframes loaderBlockInverse {
+	0%, 20% {
+		transform: rotate(0);
+	}
+	55% {
+		background-color: #F37272;
+	}
+	100% {
+		transform: rotate(-90deg);
+	}
+}
+.loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80px;
+	height: 80px;
+	transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+	animation: loader 1.2s infinite ease-in-out;
+}
+.loader span {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: #EE4040;
+	animation: loaderBlock 1.2s infinite ease-in-out both;
+}
+.loader span:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+.loader span:nth-child(2) {
+	top: 0;
+	right: 0;
+	animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+.loader span:nth-child(3) {
+	bottom: 0;
+	left: 0;
+	animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+.loader span:nth-child(4) {
+	bottom: 0;
+	right: 0;
+}
+.wrap_loader{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9999;
+}
+.loaded{
+	display: none;
+}
+</style>
 </head>
 <body>
+	<div class="wrap_loader">
+	<div class="loader">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+</div>
 <div class="overlay js-overlay-campaign">
 	<div class="popup js-popup-campaign">
 		All the materials on the website are a work of fiction. This website is done purely to showcase our front-end skills. Names, characters, businesses, places, events and incidents are either the products of our imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
@@ -382,7 +477,7 @@
 					<img src="img/team-1.jpg" alt="team">
 					<div class="img-mask t-mask">
 						<div class="social">
-							<a href=#https://www.facebook.com/">
+							<a href="https://www.facebook.com/">
 								<i class="fa fa-facebook" aria-hidden="true"></i>
 							</a>
 							<a href="https://twitter.com/">
@@ -550,7 +645,7 @@
 			</div>
 			<div class="col-xs-12">
 				<div class="s-blog">
-					<a href="https://pozitiff.cz" class="buttons but_black">read blog</a>
+					<a href="http://pozitiff.site/" class="buttons but_black">read blog</a>
 				</div>
 			</div>
 		</div>
@@ -602,7 +697,9 @@
 				</div>
 				<div class="col-xs-12">
 					<div class="copyrait">
-						<p><a href="https://pozitiff.cz">Copyright &copy; 2017 - pozitiff.cz</a><br>Marta Zhmikhova</p>
+						<p><a href="http://pozitiff.site/">Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> - pozitiff</a>
+							<br> <a href="https://www.upwork.com/fl/martazhmikhova">Marta Zhmikhova</a>
+							</p>
 					</div>
 				</div>
 			</div>
